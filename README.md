@@ -1,10 +1,12 @@
-# Automated Testing with TypeScript, Playwright, and Cucumber 🤖🆃🆂🎭
+# Automated Testing with TypeScript, Playwright, and Cucumber 🤖 🆃🆂 🎭
 
 This project provides a structure and tools for automated testing using TypeScript, Playwright, and Cucumber, following Behavior-Driven Development (BDD) best practices and employing the Page Object Model design pattern.
 
 ## Testing demoblaze.com Features 🧪
 
-This suite of tests is specifically designed to validate and test features on the [demoblaze.com](https://www.demoblaze.com) website. You'll find feature files under the `e2e/features` directory related to signup, login and adding products to the cart.
+This suite of tests is specifically designed to validate and test features on the [demoblaze.com](https://www.demoblaze.com) website. You'll find feature files under the `tests/features` directory related to signup, login and adding products to the cart.
+
+![Typescript2](https://github.com/carlosvagnoni/typescript_playwright_cucumber/assets/106275103/2ea482af-5a3b-4bd4-a56d-00e45d33aa16)
 
 ## Table of Contents 📑
 - [Requirements](#requirements-)
