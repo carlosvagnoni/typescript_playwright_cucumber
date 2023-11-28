@@ -1,4 +1,4 @@
-# Automated Web Testing with TypeScript, Playwright, and Cucumber 🤖 🆃🆂 🎭
+ñ# Automated Web Testing with TypeScript, Playwright, and Cucumber 🤖 🆃🆂 🎭
 
 This project provides a structure and tools for automated web testing using TypeScript, Playwright, and Cucumber, following Behavior-Driven Development (BDD) best practices and employing the Page Object Model design pattern.
 
@@ -9,14 +9,14 @@ This suite of tests is specifically designed to validate and test features on th
 ![Typescript2](https://github.com/carlosvagnoni/typescript_playwright_cucumber/assets/106275103/2ea482af-5a3b-4bd4-a56d-00e45d33aa16)
 
 ## Table of Contents 📑
-- [Requirements](#requirements-)
-- [Folder Structure](#folder-structure-)
-- [Installation](#installation-)
-- [Configuration](#configuration-)
-- [Test Execution](#test-execution-)
-- [Contact](#contact-)
+- [Requirements](#requirements)
+- [Folder Structure](#folder-structure)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Test Execution](#test-execution)
+- [Contact](#contact)
 
-## Requirements 📋
+## <a id="requirements">Requirements 📋</a>
 
 - Node.js 21.2.0
 - @cucumber/cucumber: 10.0.1
@@ -25,7 +25,7 @@ This suite of tests is specifically designed to validate and test features on th
 - ts-node: 10.9.1
 - winston: 3.11.0
 
-## Folder Structure 📂
+## <a id="folder-structure">Folder Structure 📂</a>
 
 - **cucumber.json:** Configuration or generated output by Cucumber.
 - **package-lock.json:** Specific details about exact dependency versions for the project.
@@ -50,7 +50,7 @@ This suite of tests is specifically designed to validate and test features on th
   - **pageObject.ts:** Class acting as a wrapper for Playwright actions.
   - **screenshot.ts:** Function for taking screenshots and attach them to an cucumber html report.
 
-## Installation 🛠️
+## <a id="installation">Installation 🛠️</a>
 
 1. Clone this repository:
 
@@ -65,12 +65,12 @@ This suite of tests is specifically designed to validate and test features on th
     npm install
     ```
 
-## Configuration ⚙️
+## <a id="configuration">Configuration ⚙️</a>
 
 - Make sure you have a browser installed and configured in the script (Chrome, Firefox, or Safari).
 - You can configure the fixture.ts file to adjust parameters such as the base URL(url) and browser.
 
-## Test Execution ▶️
+## <a id="test-execution">Test Execution ▶️</a>
 
 Run all the tests:
 
@@ -89,7 +89,7 @@ start "" "test-results\reports\cucumber_report.html"
 - Set up the respective environment variables beforehand.
 - On Windows environments, you can directly execute the `run.bat` file.
 
-## Contact 📧
+## <a id="contact">Contact 📧</a>
 
 If you have any questions or suggestions, feel free to contact me through my social media accounts.
 
