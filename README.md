@@ -1,4 +1,4 @@
-ñ# Automated Web Testing with TypeScript, Playwright, and Cucumber 🤖 🆃🆂 🎭
+# Automated Web Testing with TypeScript, Playwright, and Cucumber 🤖 🆃🆂 🎭
 
 This project provides a structure and tools for automated web testing using TypeScript, Playwright, and Cucumber, following Behavior-Driven Development (BDD) best practices and employing the Page Object Model design pattern.
 
