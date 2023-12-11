@@ -11,5 +11,6 @@ export const fixture = {
     logger: undefined as Logger,
     
     url: 'https://www.demoblaze.com',
-    browser: 'chromium'
+    browser: 'chromium',
+    headlessMode: true
 }
