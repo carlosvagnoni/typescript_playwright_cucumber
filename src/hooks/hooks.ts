@@ -15,7 +15,7 @@ let browser: Browser;
 let context: BrowserContext;
 
 BeforeAll(async function () {
-    browser = await new Browsers(fixture.browser).browser!
+    browser = await new Browsers(fixture.browser, fixture.headlessMode).browser!
     fixture.logger = createLogger(options())
     fixture.logger.info('Running typescript_playwright_cucumber project...')
 })
