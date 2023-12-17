@@ -1,6 +1,5 @@
 import { Given, When, Then } from "@cucumber/cucumber";
 import { BasePage } from "../../pages/basePage";
-import { fixture } from "../../hooks/fixture";
 import { takeScreenshot } from "../../utils/screenshot";
 
 let basePage: BasePage;
@@ -9,7 +8,7 @@ let password: string;
 
 // Step definitions using Cucumber syntax
 Given('the user has signed up with credentials: {string}, {string}.', async function (user: string, pass: string) {
-    basePage = new BasePage(fixture.page)
+    basePage = new BasePage(this.page)
     username = user
 	password = pass
 });
@@ -18,7 +17,7 @@ Then('the user is on the Login Page.', async function () {
     await basePage.clickLoginButton()
 	await basePage.waitForLoginTitle()
 	await basePage.verifyLoginTitle()
-    await takeScreenshot(this, 'loginPage', fixture.page)
+    await takeScreenshot(this, 'loginPage', this.page)
 });
 
 When('the user inputs their username and password into the form.', async function () {
@@ -33,5 +32,5 @@ When('the user clicks on the Submit button.', async function () {
 Then('the user should be logged in.', async function () {
     await basePage.waitForLoggedInUsername(username)
 	await basePage.verifyLoggedInUsername(username)
-    await takeScreenshot(this, 'userLoggedIn', fixture.page)
+    await takeScreenshot(this, 'userLoggedIn', this.page)
 });

@@ -1,4 +1,4 @@
-import { chromium, firefox, webkit, Browser, Page, BrowserContext } from '@playwright/test';
+import { chromium, firefox, webkit, Browser } from '@playwright/test';
 
 /*
 Class responsible for managing different browser instances using Playwright.
@@ -36,7 +36,6 @@ export class Browsers {
 
   private async firefoxBrowser(): Promise<Browser> {
     return await firefox.launch({
-      args: ["--kiosk"],
       headless: this.isHeadless,
     });
   }
