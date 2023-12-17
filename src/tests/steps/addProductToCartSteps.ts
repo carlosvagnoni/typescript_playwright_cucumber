@@ -3,7 +3,6 @@ import { BasePage } from "../../pages/basePage";
 import { CartPage } from "../../pages/cartPage";
 import { HomePage } from "../../pages/homePage";
 import { ProductPage } from "../../pages/productPage";
-import { fixture } from "../../hooks/fixture";
 import { takeScreenshot } from "../../utils/screenshot";
 
 let basePage: BasePage;
@@ -14,13 +13,13 @@ let msg: string;
 
 // Step definitions using Cucumber syntax
 Given('the user is browsing the list of available products.', async function () {
-    basePage = new BasePage(fixture.page)
-    cartPage = new CartPage(fixture.page)
-    homePage = new HomePage(fixture.page)    
-    productPage = new ProductPage(fixture.page)
+    basePage = new BasePage(this.page)
+    cartPage = new CartPage(this.page)
+    homePage = new HomePage(this.page)    
+    productPage = new ProductPage(this.page)
 
     await homePage.verifyCurrentUrl('https://www.demoblaze.com/')
-    await takeScreenshot(this, 'listOfProducts', fixture.page)
+    await takeScreenshot(this, 'listOfProducts', this.page)
 });
 
 When('the user selects a product from the "laptops" category.', async function () {
@@ -30,7 +29,7 @@ When('the user selects a product from the "laptops" category.', async function (
 });
 
 When('the user adds the selected product to the shopping cart.', async function () {
-    fixture.page.on('dialog', async alert => {
+    this.page.on('dialog', async (alert: any) => {
 		msg = alert.message();
 		await alert.accept();
 	});
@@ -44,5 +43,5 @@ Then("the product should be added to the user's shopping cart.", async function 
     await basePage.clickCartButton()
 	await cartPage.waitForMacbookTitleInCart()
 	await cartPage.verifyMacbookTitleInCart()
-    await takeScreenshot(this, 'productAdded', fixture.page)
+    await takeScreenshot(this, 'productAdded', this.page)
 });

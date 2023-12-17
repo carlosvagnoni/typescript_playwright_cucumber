@@ -1,4 +1,5 @@
 import { transports, format } from "winston";
+import { fixture } from "../hooks/fixture";
 
 /*
 Defines the options for logger configuration.
@@ -9,7 +10,7 @@ export function options() {
     return {
         transports: [
             new transports.File({
-                filename: 'test-results/logs/demoblaze.log',
+                filename: `test-results/logs/demoblaze_${fixture.browser}.log`,
                 level: 'debug',
                 format: format.combine(
                     format.timestamp({ format: 'MMM-DD-YYYY HH:mm:ss' }),
