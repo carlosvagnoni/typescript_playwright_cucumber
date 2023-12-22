@@ -33,10 +33,10 @@ When('the user adds the selected product to the shopping cart.', async function 
 		msg = alert.message();
 		await alert.accept();
 	});
-    await productPage.waitForMacbookTitle()
-	await productPage.clickAddToCart()
+    productPage.waitForMacbookTitle()
+	productPage.clickAddToCart()
     await productPage.waitForAlert()
-	await productPage.verifyAlertSuccessfulAddedToCart(msg)
+	productPage.verifyAlertSuccessfulAddedToCart(msg)
 });
 
 Then("the product should be added to the user's shopping cart.", async function () {

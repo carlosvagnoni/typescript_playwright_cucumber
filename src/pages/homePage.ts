@@ -1,13 +1,9 @@
-import { Page } from "@playwright/test";
 import { PageObject } from "../utils/pageObject";
 
 /**
  * HomePage class represents the home page functionalities and elements for the application.
  */
 export class HomePage extends PageObject {
-    constructor(page: Page) {
-        super(page);
-    }
 
     // Locators for elements on the page
     private readonly laptopsCategoryButtonLocator: string = "div:nth-of-type(1) > a#itemc.list-group-item:nth-of-type(3)"
