@@ -54,7 +54,7 @@ export class PageObject {
     }
 
     public async verifyCurrentUrl(expectedUrl: string): Promise<void> {
-        const currentUrl = await this.page.url()
+        const currentUrl = this.page.url()
         expect(currentUrl).toBe(expectedUrl)
     }
 

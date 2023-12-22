@@ -1,13 +1,9 @@
-import { Page } from "@playwright/test";
 import { PageObject } from "../utils/pageObject";
 
  /**
  * ProductPage class represents the product page functionalities and elements for the application.
  */
 export class ProductPage extends PageObject {
-    constructor(page: Page) {
-        super(page);
-    }
 
     // Locators for elements on the page
     private readonly macbookTitleLocator: string = "#tbodyid > h2"

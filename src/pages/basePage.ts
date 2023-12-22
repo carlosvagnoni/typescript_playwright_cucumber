@@ -1,13 +1,9 @@
-import { Page } from "@playwright/test";
 import { PageObject } from "../utils/pageObject";
 
 /**
  * Class representing the header and footer of the application.
  */
 export class BasePage extends PageObject {
-    constructor(page: Page) {
-        super(page);
-    }
 
     // Locators for elements on the page
     private readonly signupButtonLocator: string = "#signin2"
